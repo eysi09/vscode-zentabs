@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
     // There doesn't seem to be a way to just close the previous editor (instead of all other editors)
-    await vscode.commands.executeCommand('workbench.action.closeOtherEditors')
+    await vscode.commands.executeCommand('workbench.action.closeOtherEditorsInGroup')
     previousEditor = editor
   }, null, context.subscriptions)
 }
